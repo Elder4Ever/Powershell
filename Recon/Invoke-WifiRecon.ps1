@@ -20,5 +20,5 @@ ForEach($SSID in $ListOfSSID){
         $Auth = ($(netsh.exe wlan show profiles name=`"$SSID`" key=clear) | Select-String -pattern ".*Authentication.*:(.*)" -AllMatches).Matches | ForEach-Object {$_.Groups[1].Value}
         $Auth = $Auth -split "  "
         $List = [PSCustomObject]@{"PROFILE_NAME"=$SSID;"Authentication"=$Auth[0];"PASSWORD"=$passphrase}
-        $List | Export-Csv -Path "$Output" -Append -NoTypeInformation
+        $List | Export-Csv -Path "$Output" -Force -Append -NoTypeInformation
 }
